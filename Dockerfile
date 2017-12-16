@@ -1,4 +1,4 @@
-M ubuntu:latest
+FROM ubuntu:latest
 MAINTAINER Andres Herrera - Mario Castillo "fabio.herrera@correounivalle.edu.co - mario.castillo@correounivalle.edu.co"
 RUN apt-get update -y
 RUN apt-get install software-properties-common -y
@@ -17,7 +17,6 @@ RUN apt-get install -y vim procps
 RUN R -e "install.packages(c('raster') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 RUN R -e "install.packages(c('rgeos') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 RUN R -e "install.packages(c('rgdal') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
-RUN updatedb
 
 COPY *.R /
 COPY *.sh /
