@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 MAINTAINER Andres Herrera - Mario Castillo "fabio.herrera@correounivalle.edu.co - mario.castillo@correounivalle.edu.co"
-RUN apt-get install update -y
+RUN apt-get update -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository "ppa:marutter/rrutter" -y
 RUN add-apt-repository "ppa:marutter/c2d4u" -y
