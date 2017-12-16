@@ -1,12 +1,14 @@
 ## Vagrant Notes
-vagrant box list
-vagrant init hashicorp/precise64
-cd vagrant
-vagrant up
-ssh -p 2222 vagrant@localhost
+#### Just for testing into a vagrant box with a htcondor 
+* vagrant box list
+* vagrant init hashicorp/precise64
+* cd vagrant
 
-or  
+* vagrant up
+* ssh -p 2222 vagrant@localhost
 
-vagrant ssh 
+#### or  
+
+* vagrant ssh 
 
 
