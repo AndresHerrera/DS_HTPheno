@@ -1,9 +1,11 @@
 Universe = vanilla
-Should_transfer_files=Yes
+Should_transfer_files=YES
 Transfer_input_files = vi.sh
 Log=log.$(Process).$(cluster).txt
 Output=output.$(Process).$(cluster).txt
 Error=error.$(Process).$(cluster).txt
 When_to_transfer_output=ON_EXIT
 Executable = vi.sh
-Queue
+request_memory = 8192 M
+request_disk = 8192 M
+Queue 1

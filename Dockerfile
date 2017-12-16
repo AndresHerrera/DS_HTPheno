@@ -13,13 +13,14 @@ RUN apt-get install -y r-cran-readr
 #RUN R -e "install.packages(c('devtools','sp'), repos='https://cloud.r-project.org/')"
 #RUN R -e "devtools::install_github('RcppCore/Rcpp')"
 
-RUN apt-get install -y vim procps
+RUN apt-get install -y vim procps git
 RUN R -e "install.packages(c('raster') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 RUN R -e "install.packages(c('rgeos') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 RUN R -e "install.packages(c('rgdal') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 
-COPY *.R /
-COPY *.sh /
-COPY *.submit /
+RUN mkdir /source
+COPY *.R /source
+COPY *.sh /source
+COPY *.submit /source
 
-
+WORKDIR /source
