@@ -1,9 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Andres Herrera - Mario Castillo "fabio.herrera@correounivalle.edu.co - mario.castillo@correounivalle.edu.co"
+RUN add-apt-repository -y "ppa:ubuntugis/ubuntugis-unstable"
 RUN apt-get update -y
-RUN apt-get install libgdal-dev libgeos-dev libproj-dev libudunits2-dev liblwgeom-dev -y
-
-
+RUN apt-get install -y libgdal-dev libgeos-dev libproj-dev libudunits2-dev liblwgeom-dev
 RUN apt-get install sudo libgeos-dev libproj-dev libgdal-dev -y
 RUN apt-get install r-base
 #RUN R -e "install.packages(c('devtools','sp'), repos='https://cloud.r-project.org/')"
