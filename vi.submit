@@ -1,0 +1,9 @@
+Universe = vanilla
+Should_transfer_files=Yes
+Transfer_input_files = vi.sh
+Log=log.$(Process).$(cluster).txt
+Output=output.$(Process).$(cluster).txt
+Error=error.$(Process).$(cluster).txt
+When_to_transfer_output=ON_EXIT
+Executable = vi.sh
+Queue
