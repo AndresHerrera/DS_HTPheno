@@ -11,4 +11,8 @@
 
 * vagrant ssh 
 
+## Docker notes
+* docker images
+* docker build -t htpheno .
+* docker run --rm -it htpheno
 
