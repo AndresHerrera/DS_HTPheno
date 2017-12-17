@@ -20,8 +20,16 @@
 * sudo docker run -it -v $(pwd):/source/data --entrypoint /bin/bash --rm htpheno
 
 ## upload input images
-scp micasense_image.tif andresherrera@52.224.176.168:/home/andresherrera/DS_HTPheno/data/input
+* scp micasense_image.tif andresherrera@52.224.176.168:/home/andresherrera/DS_HTPheno/data/input
 
 ## getting all result images
-scp andresherrera@52.224.176.168:/home/andresherrera/DS_HTPheno/data/output/*.* .
+* scp andresherrera@52.224.176.168:/home/andresherrera/DS_HTPheno/data/output/*.* .
+
+### From Docker Hub 
+
+* docker pull andresherrera/dshtpheno
+
+* cd data
+
+* docker run -it -v $(pwd):/source/data --entrypoint /bin/bash --rm  andresherrera/dshtpheno
 
