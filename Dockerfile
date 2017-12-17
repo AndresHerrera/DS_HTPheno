@@ -19,6 +19,7 @@ RUN R -e "install.packages(c('rgeos') ,repos='https://cloud.r-project.org/',depe
 RUN R -e "install.packages(c('rgdal') ,repos='https://cloud.r-project.org/',dependencies=TRUE)"
 
 RUN mkdir /source
+RUN mkdir /source/data/output
 COPY *.R /source/
 COPY *.sh /source/
 COPY *.submit /source/
